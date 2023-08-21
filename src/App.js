@@ -10,6 +10,7 @@ import UseAxios from './Hooks/UseAxios';
 import SearchButtons from './components/SearchButtons';
 
 
+
 // Create useContext..
 export const ImageContext = createContext();
 
@@ -39,6 +40,7 @@ const App=()=> {
   return (
     <ImageContext.Provider value={value}>
       <Jumbutron>
+      
          <SearchField/>
       </Jumbutron>
       <SearchButtons/>

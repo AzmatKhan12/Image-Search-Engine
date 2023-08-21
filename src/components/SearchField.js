@@ -22,24 +22,27 @@ const SearchField = (props) => {
 
    const changeInputHandler= (e)=>{
     setSearchValue(e.target.value)
+    
    }
   return (
-    <div className="flex px-8  ">
-      <input
-        className="bg-gray-50 border border-gray-300 w-full text-sm item-centre indent-2  
-         p-2.5 outline-none focus:border-blue-500 focus:ring-2 
-         rounded-tl rounded-bl "
-        type="search"
-        placeholder="Search anything"
-        value={searchValue}
-        onChange={changeInputHandler}
-        onKeyDown={changeEnterHandler}
-      />
-      <Button
-         onClick= {changeButtonHandler}
-         disabled ={!searchValue} >
-          Search
-        </Button>
+    <div>
+      <div className="flex px-8">
+          <input style={{marginLeft:"400px"}}
+            className="bg-gray-50 border border-gray-300 w-full text-sm item-centre indent-2  
+            p-2.5 outline-none focus:border-blue-500 focus:ring-2 
+            rounded-tl rounded-bl max-w-xs  "
+            onKeyDown={changeEnterHandler}
+            value={searchValue}
+            onChange={changeInputHandler}
+            
+          />
+          <Button
+            onClick= {changeButtonHandler}
+            disabled ={!searchValue} >
+            Search
+            
+          </Button>
+        </div>
     </div>
   );
 };
